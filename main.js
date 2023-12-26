@@ -112,6 +112,7 @@ function createBlockElement(block, blockColors) {
   return blockElement;
 }
 
+
 function updateResult() {
   container.innerHTML = '';
 
@@ -162,4 +163,8 @@ async function fetchBlocks() {
   }
 }
 
-const blocks = await fetchBlocks();
+let blocks = [];
+
+(async() => {
+  blocks = await fetchBlocks();
+})();
